@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>About Justina Huang</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Justina Huang</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">about<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./writing.html">writing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="./resume.html">resume</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-center align-items-top">
+        <div class="page col-10 col-lg-5" id='about-media' >
+              <img src="./assets/dog.jpg" class='image' />
+        </div>
+        <div class="page col-10 col-lg-5" id='about-summary'>
+          <h1> About </h1>
+          <p> My name in Mandarin is “Huang Jia En,” which means "additional blessing," and my brother is nine years my senior.  Go figure.  I suppose “Whoopsie Huang” doesn’t quite have the same ring to it. </p>
+          <p> A more common term ascribed to me in this day and age is the term “extra,” partially in part to my boundless obsession with wordplay and narratives.  </p>
+          <p> To explain, I am a byproduct of my Taiwanese heritage, Shanghainese upbringing, and American education.   Call it cultural homelessness or a "well rounded" global perspective, but regardless of which corner of the globe I inhabit, I have never been truly at home.  </p>
+          <p> This restlessness results in a genuine love of people and growing interest in storytelling, - whether it be the displaced refugee, rising YouTube star, trends in cosmetic surgery.  I’ll throw my pen (or rather, keyboard, at it).</p>
+          <p> At the end of the day, I’m happy to see you here.  Feel free to say hello at helloimjustina@gmail.com!</p>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-center align-items-top">
+          <div class="col-6" id='footer-nav' >
+            <button type="button" class="btn btn-link">back</button>
+          </div>
+          <div class="col-6" id='footer-nav' >
+            <button type="button" class="btn btn-link">next</button>
+          </div>
+        </div>
+        <!-- <span class="text-muted">Place sticky footer content here.</span> -->
+      </div>
+    </footer>
+
+
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+
+
+raspivid -o - -t 0 -vf -hf -fps 30 -b 6000000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero
+-f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv [SERVER URL]/[STREAM NAME]
+
+rtmp://rtmp-api.facebook.com:80/rtmp/10158257495770274?ds=1&s_l=1&a=ATgNo54G1Q4RJ1vv
+
+raspivid -o - -t 0 -vf -hf -fps 30 -b 6000000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://rtmp-api.facebook.com:80/rtmp//10158257495770274?ds=1&s_l=1&a=ATgNo54G1Q4RJ1vv
+
+rtmp://a.rtmp.youtube.com/live2/13zx-q1qb-bxbm-7gat
+
+raspivid -o - -t 0 -vf -hf -fps 30 -b 6000000 | ffmpeg -re -ar 44100 -ac 2 -acodec pcm_s16le -f s16le -ac 2 -i /dev/zero -f h264 -i - -vcodec copy -acodec aac -ab 128k -g 50 -strict experimental -f flv rtmp://a.rtmp.youtube.com/live2/13zx-q1qb-bxbm-7gat
