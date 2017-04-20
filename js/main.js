@@ -56,9 +56,7 @@ function whichPage(){
 
 
 
-$(document).ready(function() {
-  whichPage()
-});
+
 
 $(window).ready(updateHeight);
 $(window).resize(updateHeight);
@@ -69,31 +67,9 @@ function updateHeight() {
     div.css("height", newWidth);
   }
 
-
-
-
-
-// // highlight nav button on hover
-//   $(".fa").addClass('fa-2x')
-//   $("#writing-btn").hover(function() {
-//     $(this).addClass('active-writing');
-//   }, function() {
-//     $(this).removeClass('active-writing')
-//   });
-//
-//   $("#resume-btn").hover(function() {
-//     $(this).addClass('active-resume');
-//   }, function() {
-//     $(this).removeClass('active-resume')
-//   });
-//
-//   $("#about-btn").hover(function() {
-//     $(this).addClass('active-about');
-//   }, function() {
-//     $(this).removeClass('active-about')
-//   });
-
-
+  // $(document).ready(function() {
+  //   whichPage()
+  // });
 
 
   // media query event handler
@@ -106,13 +82,11 @@ function updateHeight() {
   // media query change
   function WidthChange(mq) {
     if (mq.matches) {
-
-
-
-
+      whichPage();
 
     } else {
       $(".fa").removeClass('fa-2x')
+
 
     }
   }
