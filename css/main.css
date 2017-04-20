@@ -1,11 +1,7 @@
 html {
-  background-color: rgb(247, 243, 231);
+
 }
 body {
-  background-color: rgb(247, 243, 231);
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
 }
 .page-wrapper {
 
@@ -15,7 +11,7 @@ body {
 
 /*Navbar*/
 #header {
-  background-color: rgb(247, 243, 231);
+
 }
 li.nav-item {
   width: 85px;
@@ -98,7 +94,7 @@ background-size:5px 5px;
   margin-left: 4.5vw;
   width: 30vw;
   position: absolute;
-  bottom: 0;
+  bottom: 12px;
   left: 0;
 }
 .social-media-links div {
@@ -111,6 +107,16 @@ background-size:5px 5px;
 
 /*FLEXBOX*/
 .flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+.flexcontainer-nav {
    display: -webkit-flex;
    display: flex;
    -webkit-flex-direction: row /* works with row or column */
@@ -147,6 +153,10 @@ background-size:5px 5px;
   .title h1 {
     font-size: 4.8vw;
   }
+  .flexcontainer-nav {
+    justify-content: left;
+  }
+
 }
 
 @media only screen and (min-width: 990px) {

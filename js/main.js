@@ -1,3 +1,65 @@
+
+
+function hoverHome(){
+  $("#home-btn").hover(function() {
+    $(this).addClass('active-home');
+  }, function() {
+    $(this).removeClass('active-home')
+  });
+}
+function hoverWriting(){
+  $("#writing-btn").hover(function() {
+    $(this).addClass('active-writing');
+  }, function() {
+    $(this).removeClass('active-writing')
+  });
+}
+function hoverResume(){
+  $("#resume-btn").hover(function() {
+    $(this).addClass('active-resume');
+  }, function() {
+    $(this).removeClass('active-resume')
+  });
+}
+function hoverAbout(){
+  $("#about-btn").hover(function() {
+    $(this).addClass('active-about');
+  }, function() {
+    $(this).removeClass('active-about')
+  });
+}
+
+// Highlight nav section of current page
+function whichPage(){
+  if ( document.URL.includes("index.html") ) {
+  $("#home-btn").addClass('active-home');
+  hoverAbout()
+  hoverResume();
+  hoverWriting();
+  } else if ( document.URL.includes("about.html") ) {
+    $("#about-btn").addClass('active-about');
+    hoverHome();
+    hoverResume();
+    hoverWriting();
+  } else if ( document.URL.includes("writing.html") ) {
+    $("#writing-btn").addClass('active-writing');
+    hoverAbout();
+    hoverResume();
+    hoverHome();
+  } else if ( document.URL.includes("resume.html") ) {
+    $("#resume-btn").addClass('active-resume');
+    hoverAbout();
+    hoverHome();
+    hoverWriting();
+  }
+}
+
+
+
+$(document).ready(function() {
+  whichPage()
+});
+
 $(window).ready(updateHeight);
 $(window).resize(updateHeight);
 function updateHeight() {
@@ -6,6 +68,30 @@ function updateHeight() {
 
     div.css("height", newWidth);
   }
+
+
+
+
+
+// // highlight nav button on hover
+//   $(".fa").addClass('fa-2x')
+//   $("#writing-btn").hover(function() {
+//     $(this).addClass('active-writing');
+//   }, function() {
+//     $(this).removeClass('active-writing')
+//   });
+//
+//   $("#resume-btn").hover(function() {
+//     $(this).addClass('active-resume');
+//   }, function() {
+//     $(this).removeClass('active-resume')
+//   });
+//
+//   $("#about-btn").hover(function() {
+//     $(this).addClass('active-about');
+//   }, function() {
+//     $(this).removeClass('active-about')
+//   });
 
 
 
@@ -20,38 +106,13 @@ function updateHeight() {
   // media query change
   function WidthChange(mq) {
     if (mq.matches) {
-      $(".fa").addClass('fa-2x')
-      $("#home-btn").addClass('active-home')
-      // $("#writing-btn").addClass('active-writing')
-      // $("#resume-btn").addClass('active-resume')
-      // $("#about-btn").addClass('active-about')
 
-      $("#writing-btn").hover(function() {
-        $(this).addClass('active-writing');
-      }, function() {
-        $(this).removeClass('active-writing')
-      });
 
-      $("#resume-btn").hover(function() {
-        $(this).addClass('active-resume');
-      }, function() {
-        $(this).removeClass('active-resume')
-      });
-
-      $("#about-btn").hover(function() {
-        $(this).addClass('active-about');
-      }, function() {
-        $(this).removeClass('active-about')
-      });
 
 
 
     } else {
       $(".fa").removeClass('fa-2x')
-      $("#home-btn").removeClass('active-home')
-      // $("#writing-btn").removeClass('active-writing')
-      // $("#resume-btn").removeClass('active-resume')
-      // $("#about-btn").removeClass('active-about')
-    }
 
+    }
   }
