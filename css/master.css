@@ -1,0 +1,100 @@
+body {
+}
+.page-wrapper {
+  background-color: rgb(247, 243, 231);
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.banner-wrapper {
+
+}
+.banner-1 {
+  border-style: dotted;
+  border-width: 7.5px;
+  border-color: rgb(34,153,208);
+
+
+  height: 81vh;
+  width: 40vw;
+
+  position: absolute;
+
+
+  margin: auto;
+  top: 50px;
+  bottom: 90px;
+  right: 90px;
+  left: 0;
+}
+.banner-2 {
+  border-style: solid;
+  border-width: 7.5px;
+  border-color: rgb(34,153,208);
+
+  height: 81vh;
+  width: 40vw;
+
+  position: absolute;
+
+
+  margin: auto;
+  top: 50px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+.title {
+  line-height: 5vh;
+
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  top: 25vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+
+
+
+
+}
+.title h1 {
+  margin-bottom: 3.5vh;
+  font-size: 35px !important;
+}
+.title p {
+  margin-bottom: 1.5%;
+}
+
+@media only screen and (max-width: 900px) {
+  .title {
+    top: 2vh;
+  }
+  .banner-2{
+    width: 60vw;
+    height: 40vh;
+    top: 0;
+
+  }
+  .banner-1{
+    width: 60vw;
+    height: 40vh;
+    top: 0;
+    bottom: 50px;
+    right: 50px;
+
+  }
+}
