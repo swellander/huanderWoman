@@ -1,4 +1,23 @@
+.page.col-11.col-lg-5 {
+  width: 45vw !important;
+}
 
+@media only screen and (min-width: 990px) {
+  li.nav-item {
+    border: 1px solid rgb(191, 191, 191);
+  }
+}
+
+div.row {
+  margin-top: 8vh;
+}
+
+.page {
+  background-color: rgb(238, 246, 243);
+  margin: 1vw;
+  padding: 5vw;
+  font-family: Geogia;
+}
 
 .main-text
 {
@@ -26,13 +45,46 @@
 }
 
 /*Carousel*/
-/*.carousel-indicators li {
+.carousel-item {
+  padding-bottom: 15vh;
+}
+.carousel-caption {
+  color: rgb(71, 71, 71);
+  bottom: -5vh;
+}
+ol.carousel-indicators {
+  color: rgb(71, 71, 71);
+  bottom: -6vh;
+}
 
-    border-radius: 50px !important;
-    color: red !important;
-    bottom: -30px;
-}*/
-
-#my-pics {
+#carouselExampleIndicators img {
   border: 8px solid white;
 }
+#carouselExampleIndicators {
+  margin-bottom: 45px;
+}
+
+
+
+/*About Column*/
+div#about-summary h1 {
+  margin-bottom: 15%;
+}
+
+.col-6 {
+  text-align: center;
+}
+
+button.btn.btn-link {
+  font-family: Georgia-Italic !important;
+  color: rgb(74, 74, 74);
+}
+button.btn.btn-link:hover {
+  cursor: pointer;
+  cursor: hand;
+  text-decoration: none;
+}
+div#footer-nav {
+  bottom: 5vh;
+}
+div

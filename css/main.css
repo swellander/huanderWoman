@@ -13,6 +13,10 @@ body {
 #header {
 
 }
+a.navbar-brand {
+  font-size: 16px;
+  font-family: Georgia;
+}
 li.nav-item {
   width: 85px;
   font-family: Georgia-Italic;
