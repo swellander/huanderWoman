@@ -1,0 +1,59 @@
+.lavender {
+  background-color: rgb(239, 238, 246);
+}
+
+/*Quotes*/
+.quote-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.quote {
+  width: 100%;
+  background-color: rgb(253, 253, 253);
+  border-radius: 5px;
+  padding: 1.8vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 0;
+  margin: .3vw;
+  line-height: 19px;
+  color: rgb(146, 146, 146);
+}
+.quote p {
+  font-size: 18px;
+  margin: 0;
+  font-style: italic;
+
+}
+.quote p.author {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  margin-right: 10px;
+  font-family: 'Fira Sans', sans-serif;
+  color: rgb(117, 117, 117);
+}
+.align-right {
+  text-align: right;
+  position: relative;
+  bottom: 17px;
+  margin-right: -10px;
+}
+
+.fa-quote-left {
+  margin-left: -22px;
+  color: rgb(165, 236, 253);
+}
+.fa-quote-right {
+  color: rgb(165, 236, 253);
+  padding-left: 10px;
+  margin-right: -10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .quote {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
