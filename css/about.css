@@ -59,6 +59,7 @@ ol.carousel-indicators {
 
 #carouselExampleIndicators img {
   border: 8px solid white;
+  opacity: .87;
 }
 #carouselExampleIndicators {
   margin-bottom: 45px;

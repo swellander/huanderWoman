@@ -16,6 +16,8 @@ body {
 a.navbar-brand {
   font-size: 16px;
   font-family: Georgia;
+  color: rgb(71, 71, 71) !important;
+  opacity: .91;
 }
 li.nav-item {
   width: 85px;
