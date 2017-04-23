@@ -169,4 +169,7 @@ background-size:5px 5px;
   li.nav-item {
     border: 1px solid rgb(124, 225, 168);
   }
+  /*body {
+    overflow: hidden;
+  }*/
 }
